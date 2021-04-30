@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset=UTF-8/>
+    <meta charset='utf-8'>
     <link rel="stylesheet" type="text/css" href="styles.css"/>
-    <h1>example</h1>
-
-    <button onclick="">Pencil</button>
-    <button onclick="rotation()">AutoRotate</button>
+    <div class="box">
+        <a class="btn" onclick="rotation()">Автоповорот</a>
+        <dialog>
+            <p>Графе́н (англ. graphene) — двумерная аллотропная модификация углерода, образованная слоем атомов углерода толщиной в один атом.
+                Атомы углерода находятся в sp²-гибридизации и соединены посредством σ- и π-связей в гексагональную двумерную кристаллическую решётку.
+                Его можно представить как одну плоскость слоистого графита, отделённую от объёмного кристалла. По оценкам, графен обладает большой механической жёсткостью[4] и рекордно большой теплопроводностью[5]. Высокая подвижность носителей заряда, которая оказывается максимальной среди всех известных материалов (при той же толщине), делает его перспективным
+                материалом для использования в самых различных приложениях, в частности, как будущую основу наноэлектроники[6] и возможную замену кремния в интегральных микросхемах.         </p>
+            <a class="btn btn-red" id="close">Закрыть</a>
+        </dialog>
+        <a class="btn" id="show">Информация о материалах</a>
+    </div>
 </head>
 <div id="graphene" class="toggleDiv">
     <script src="three.min.js"></script>
@@ -17,6 +24,7 @@
         let autoRotate, controls;
         modelString = "graphiteName"
         autoRotate = false;
+
         function init() {
             autoRotate = false
             scene = new THREE.Scene();
@@ -72,9 +80,9 @@
         init();
 
         function rotation() {
-            if (autoRotate == false){
+            if (autoRotate == false) {
                 autoRotate = true
-            }else{
+            } else {
                 autoRotate = false
             }
             controls.autoRotate = autoRotate;
@@ -92,5 +100,15 @@
             x.style.display = "none";
         }
     }
+
+</script>
+<script type=text/javascript>
+    var dialog = document.querySelector('dialog');
+    document.querySelector('#show').onclick = function () {
+        dialog.showModal();
+    };
+    document.querySelector('#close').onclick = function () {
+        dialog.close();
+    };
 </script>
 </html>

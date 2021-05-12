@@ -1,8 +1,20 @@
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
 body {
     width: 100vw;
     height: 100vh;
     margin: 0;
-    overflow: hidden;
+	align-content: center;
+    overflow: scroll;
+	background-color: lightgray;
+	vertical-align: middle;
 }
 dialog{
 	margin: 5%;
@@ -15,7 +27,23 @@ dialog{
     background-color: gray;
 }
 
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
 
+.container p {
+    width: 400px;
+    padding: 15px;
+    background-color: #f1f1f1;
+}
+#page-wrap {
+     width: 800px;
+     margin: 0 auto;
+	text-align: center;
+}
 
 .hot-container p { margin-top: 10px; }
 a { text-decoration: none; margin: 0 10px; }

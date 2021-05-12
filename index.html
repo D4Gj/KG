@@ -3,81 +3,9 @@
 <head>
     <meta charset='utf-8'>
     <link rel="stylesheet" type="text/css" href="styles.css"/>
-    <style>
-        body {
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    overflow: hidden;
-}
-dialog{
-	margin: 5%;
-}
-.box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 5%;
-    background-color: gray;
-}
-
-
-
-.hot-container p { margin-top: 10px; }
-a { text-decoration: none; margin: 0 10px; }
-
-.hot-container {
-	min-height: 100%;
-	margin-top: 100%;
-	width: 100%;
-	text-align: center;
-}
-
-a.btn {
-	display: inline-block;
-	color: #666;
-	background-color: #eee;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	font-size: 100%;
-	padding: 10px 30px;
-	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	border: 1px solid rgba(0,0,0,0.3);
-	border-bottom-width: 3px;
-    width: 33%;
-
-
-}
-
-	a.btn:hover {
-		background-color: #e3e3e3;
-		border-color: rgba(0,0,0,0.5);
-	}
-
-	a.btn:active {
-		background-color: #CCC;
-		border-color: rgba(0,0,0,0.9);
-	}
-
-	a.btn.btn-red {
-	background-color: #E48681;
-	border-color: rgba(0,0,0,0.3);
-	text-shadow: 0 1px 0 rgba(0,0,0,0.5);
-	color: #FFF;
-}
-    </style>
     <div class="box">
         <a class="btn" onclick="rotation()">Автоповорот</a>
-        <dialog>
-            <p>Графе́н (англ. graphene) — двумерная аллотропная модификация углерода, образованная слоем атомов углерода толщиной в один атом.
-                Атомы углерода находятся в sp²-гибридизации и соединены посредством σ- и π-связей в гексагональную двумерную кристаллическую решётку.
-                Его можно представить как одну плоскость слоистого графита, отделённую от объёмного кристалла. По оценкам, графен обладает большой механической жёсткостью[4] и рекордно большой теплопроводностью[5]. Высокая подвижность носителей заряда, которая оказывается максимальной среди всех известных материалов (при той же толщине), делает его перспективным
-                материалом для использования в самых различных приложениях, в частности, как будущую основу наноэлектроники[6] и возможную замену кремния в интегральных микросхемах.         </p>
-            <a class="btn btn-red" id="close">Закрыть</a>
-        </dialog>
-        <a class="btn" id="show">Информация о материалах</a>
+        <a class="btn" id="show" href="videos.html">Video</a>
     </div>
 </head>
 <div id="graphene" class="toggleDiv">
@@ -94,10 +22,10 @@ a.btn {
             autoRotate = false
             scene = new THREE.Scene();
             scene.background = new THREE.Color(0xdddddd);
-            camera = new THREE.PerspectiveCamera(20, window.innerWidth / window.innerHeight, 1, 5000);
-            camera.rotation.y = 45 / 180 * Math.PI;
-            camera.position.x = 300;
-            camera.position.y = 100;
+            camera = new THREE.PerspectiveCamera(30, window.innerWidth / window.innerHeight, 1, 5000);
+            camera.rotation.y = 30 / 180 * Math.PI;
+            camera.position.x = 100;
+            camera.position.y = 400;
             camera.position.z = 1000;
 
             renderer = new THREE.WebGLRenderer({antialias: true});
@@ -131,6 +59,16 @@ a.btn {
                     gltf.scene.scale.set(5, 5, 5) // scale here
                     gltf.scene.translateX(-100);
                     gltf.scene.rotateY(30);
+                    scene.add(gltf.scene);
+                    animate()
+                }, (xhr) => xhr, (err) => console.error(e));
+
+            loader.load('models/graphane.gltf',
+                function (gltf) {
+
+                    gltf.scene.scale.set(5, 5, 5) // scale here
+                    gltf.scene.translateX(350);
+
                     scene.add(gltf.scene);
                     animate()
                 }, (xhr) => xhr, (err) => console.error(e));

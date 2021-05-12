@@ -13,9 +13,8 @@
     <script src="GLTFLoader.js"></script>
     <script src="OrbitControls.js"></script>
     <script>
-        let scene, camera, renderer, modelString, loader;
+        let scene, camera, renderer, loader;
         let autoRotate, controls;
-        modelString = "graphiteName"
         autoRotate = false;
 
         function init() {
@@ -33,7 +32,6 @@
             document.body.appendChild(renderer.domElement);
 
             controls = new THREE.OrbitControls(camera, renderer.domElement);
-
 
             directionalLight = new THREE.DirectionalLight(0xffffff, 10);
             directionalLight.position.set(1, 1, 1);
@@ -93,25 +91,4 @@
         }
     </script>
 </div>
-
-<script>
-    function myFunction() {
-        var x = document.getElementById("graphene");
-        if (x.style.display === "none") {
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
-        }
-    }
-
-</script>
-<script type=text/javascript>
-    var dialog = document.querySelector('dialog');
-    document.querySelector('#show').onclick = function () {
-        dialog.showModal();
-    };
-    document.querySelector('#close').onclick = function () {
-        dialog.close();
-    };
-</script>
 </html>

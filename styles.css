@@ -13,12 +13,14 @@ body {
     margin: 0;
 	align-content: center;
     overflow: scroll;
-	background-color: lightgray;
-	vertical-align: middle;
+    background-color: lightgray;
+    vertical-align: middle;
 }
-dialog{
-	margin: 5%;
+
+dialog {
+    margin: 5%;
 }
+
 .box {
     display: flex;
     align-items: center;
@@ -39,54 +41,72 @@ dialog{
     padding: 15px;
     background-color: #f1f1f1;
 }
+
 #page-wrap {
-     width: 800px;
-     margin: 0 auto;
-	text-align: center;
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-.hot-container p { margin-top: 10px; }
-a { text-decoration: none; margin: 0 10px; }
+.hot-container p {
+    margin-top: 10px;
+}
+
+a {
+    text-decoration: none;
+    margin: 0 10px;
+}
 
 .hot-container {
-	min-height: 100%;
-	margin-top: 100%;
-	width: 100%;
-	text-align: center;
+    min-height: 100%;
+    margin-top: 100%;
+    width: 100%;
+    text-align: center;
 }
 
 a.btn {
-	display: inline-block;
-	color: #666;
-	background-color: #eee;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	font-size: 100%;
-	padding: 10px 30px;
-	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	border: 1px solid rgba(0,0,0,0.3);
-	border-bottom-width: 3px;
+    display: inline-block;
+    color: #666;
+    background-color: #eee;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 100%;
+    padding: 10px 30px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom-width: 3px;
     width: 33%;
-	text-align: center;
+    text-align: center;
 
 
 }
 
-	a.btn:hover {
-		background-color: #e3e3e3;
-		border-color: rgba(0,0,0,0.5);
-	}
+h3 {
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
 
-	a.btn:active {
-		background-color: #CCC;
-		border-color: rgba(0,0,0,0.9);
-	}
+h1 {
+    text-align: center;
+}
 
-	a.btn.btn-red {
-	background-color: #E48681;
-	border-color: rgba(0,0,0,0.3);
-	text-shadow: 0 1px 0 rgba(0,0,0,0.5);
-	color: #FFF;
+
+a.btn:hover {
+    background-color: #e3e3e3;
+    border-color: rgba(0, 0, 0, 0.5);
+}
+
+a.btn:active {
+    background-color: #CCC;
+    border-color: rgba(0, 0, 0, 0.9);
+}
+
+a.btn.btn-red {
+    background-color: #E48681;
+    border-color: rgba(0, 0, 0, 0.3);
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+    color: #FFF;
 }
